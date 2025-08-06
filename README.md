@@ -20,3 +20,11 @@ void listAllFiles() {
     }
 }
 
+void listFilesByExtension(const string& ext) {
+    cout << "\nFiles with extension " << ext << ":\n";
+    for (const auto& entry : fs::directory_iterator(fs::current_path())) {
+        if (fs::is_regular_file(entry) && entry.path().extension() == ext)
+            cout << "- " << entry.path().filename().string() << endl;
+    }
+}
+
