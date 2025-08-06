@@ -12,3 +12,11 @@ void displayCurrentDirectory() {
     cout << "\nCurrent Directory: " << buffer << endl;
 }
 
+void listAllFiles() {
+    cout << "\nFiles in current directory:\n";
+    for (const auto& entry : fs::directory_iterator(fs::current_path())) {
+        if (fs::is_regular_file(entry))
+            cout << "- " << entry.path().filename().string() << endl;
+    }
+}
+
