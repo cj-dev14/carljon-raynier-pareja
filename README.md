@@ -148,7 +148,7 @@ void mainMenu() {
             default: cout << "Invalid choice.\n";
         }
     } while (choice != 4);
-
+}
 
 int main() {
     mainMenu();
