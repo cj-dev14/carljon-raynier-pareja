@@ -38,3 +38,9 @@ void listFilesByPattern(const string& pattern) {
         }
     }
 }
+
+void listFiles() {
+    int choice;
+    cout << "\n[1] List All Files\n[2] List by Extension\n[3] List by Pattern\nEnter choice: ";
+    cin >> choice;
+    cin.ignore();
